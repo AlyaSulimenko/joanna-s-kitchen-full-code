@@ -1,0 +1,27 @@
+// Font by default
+$fontFamily: "Montserrat";
+$handwritingFont: "Dancing script";
+$fontSize: rem(18);
+// Main colours
+$backgroundColor: rgb(251, 239, 230); //#FBEFE6
+$fontColor: rgb(52, 46, 33);
+$accentColorPrimary: rgba(255, 149, 81, 1);
+$accentColorSecondary: rgb(13, 201, 201); //#0DC9C9
+// min desktop width, px
+$minWidth: 320;
+// max desktop width, px
+$maxWidth: 1920;
+// max container width
+$maxWidthContainer: 1620;
+//safety paddings(2*15px)
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+//Break-points
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+// Adaptation:
+// 1 = responsive (no bp),
+// 2 = with bp
+$responsiveType: 1;

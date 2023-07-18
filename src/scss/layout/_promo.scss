@@ -1,0 +1,132 @@
+.promo {
+  // @include adaptiveValue("padding-top", 300, 250);
+  // @include adaptiveValue("padding-top", 30, 10);
+  @include adaptiveValue("padding-bottom", 60, 20);
+  background-color: $backgroundColor;
+
+  // .promo__container
+
+  &__container {
+    position: relative;
+  }
+  // .promo__content
+
+  &__content {
+    position: relative;
+    padding-top: rem(40);
+    z-index: 5;
+    @media (max-width: $mobileSmall) {
+      padding-top: 0;
+    }
+  }
+  // .promo__title
+
+  &__title {
+    max-width: rem(975);
+    line-height: math.div(75, 70);
+    @media (max-width: $tablet) {
+      max-width: rem(700);
+    }
+  }
+  // .promo__subtitle
+
+  &__subtitle {
+    max-width: rem(975);
+    line-height: math.div(75, 50);
+    @include adaptiveValue("margin-bottom", 40, 20);
+    @media (max-width: $tablet) {
+      max-width: rem(750);
+    }
+  }
+
+  // .promo__descr
+
+  &__descr {
+    max-width: rem(1135);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 80, 60);
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  // .promo__form
+
+  &__form {
+    &:not(:last-child) {
+      @include adaptiveValue("padding-bottom", 40, 10);
+    }
+    .form {
+      margin: 0 auto;
+    }
+  }
+}
+.icons-promo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.6;
+  @media (max-width: $mobileSmall) {
+    display: none;
+  }
+
+  &__item {
+    position: absolute;
+    width: rem(50);
+    height: rem(50);
+    z-index: -1;
+
+    // .icons-promo__item_1
+
+    &_1 {
+      top: 68%;
+      left: 2%;
+    }
+
+    // .icons-promo__item_2
+
+    &_2 {
+      top: 24%;
+      left: 10%;
+    }
+
+    // .icons-promo__item_3
+
+    &_3 {
+      bottom: -4%;
+      left: 24%;
+    }
+
+    // .icons-promo__item_4
+
+    &_4 {
+      top: 5%;
+      left: 80%;
+    }
+
+    // .icons-promo__item_5
+
+    &_5 {
+      top: 40%;
+      left: 66%;
+    }
+
+    // .icons-promo__item_6
+
+    &_6 {
+      bottom: 0;
+      left: 90%;
+    }
+
+    // .icons-promo__item_7
+
+    &_7 {
+      top: 50%;
+      right: 0%;
+    }
+  }
+}

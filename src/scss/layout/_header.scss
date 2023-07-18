@@ -1,0 +1,287 @@
+.header {
+  //position: fixed;
+  position: relative;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // z-index: 50;
+  @include adaptiveValue("padding-top", 40, 10);
+  @include adaptiveValue("padding-bottom", 55, 30);
+  background-color: $backgroundColor;
+  transition: all 0.3s ease 0s;
+  // &.fixed {
+  //   @media (max-width: $tablet) {
+  //     position: fixed;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  // }
+
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  // .header__logo
+
+  &__logo {
+  }
+
+  // .header__logo-tablet
+
+  &__logo-tablet {
+  }
+
+  // .header__menu
+
+  &__menu {
+  }
+
+  // .header__actions
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+  }
+
+  // .header__button
+
+  &__button {
+    @media (max-width: $tablet) {
+      font-size: rem(40);
+      @include adaptiveValue("font-size", 40, 22, 1, 991, 320);
+    }
+  }
+
+  //.header__circle
+  &__circle {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(550);
+    height: rem(550);
+    @media (max-width: $mobile) {
+      opacity: 0.8;
+    }
+    @media (max-width: $mobileSmall) {
+      display: none;
+    }
+    &::before {
+      content: "";
+      display: block;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+    //.header__circle_1
+    &_1 {
+      &::before {
+        transform: translate(calc(-50% + rem(0)), calc(-50% + rem(0)));
+        border: 1.5px solid $accentColorPrimary;
+      }
+    }
+    //.header__circle_2
+    &_2 {
+      &::before {
+        transform: translate(calc(-50% + rem(55)), calc(-50% - rem(55)));
+        border: 1.5px solid $accentColorSecondary;
+      }
+    }
+  }
+}
+//===================================================================================================================================
+.logo {
+  position: relative;
+  z-index: 12;
+  @media (max-width: $tablet) {
+    display: none;
+  }
+  @media (max-width: $mobile) {
+    display: block;
+  }
+  @media (max-width: $mobileSmall) {
+    margin: 0 auto;
+    text-align: center;
+  }
+  // .logo__image
+  &__image {
+    display: block;
+    width: rem(120);
+    img {
+      width: 100%;
+    }
+  }
+}
+//===================================================================================================================================
+.logo-tablet {
+  position: relative;
+  display: none;
+  z-index: 12;
+  @media (max-width: $tablet) {
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+  }
+  @media (max-width: $mobile) {
+    display: none;
+  }
+  // .logo-tablet__image
+  &__image {
+    width: rem(200);
+    img {
+      width: 100%;
+    }
+  }
+  // .logo-tablet__title
+  &__title {
+    width: rem(350);
+    flex: 1 1 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -3;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: rem(580);
+    height: rem(580);
+  }
+  &:before {
+    transform: translate(calc(-55% + rem(0)), calc(-40% + rem(0)));
+
+    border: 1.5px solid $accentColorPrimary;
+  }
+  &:after {
+    transform: translate(calc(-55% + rem(55)), calc(-40% - rem(55)));
+    border: 1.5px solid $accentColorSecondary;
+  }
+}
+//===================================================================================================================================
+//===================================================================================================================================
+.menu {
+  flex: 1 1 auto;
+  padding: 0 rem(10);
+  // .menu__body
+  &__body {
+    @media (max-width: $tablet) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: $backgroundColor;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(40);
+      padding-top: rem(350);
+      padding-bottom: rem(30);
+      padding-left: rem(10);
+      padding-right: rem(10);
+      transition: all 0.4s ease-in-out;
+      z-index: 10;
+      &:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: rem(350);
+        background-color: $backgroundColor;
+        z-index: 10;
+        transition: all 0.4s ease-in-out;
+      }
+      &.opened {
+        left: 0%;
+
+        &:before {
+          left: 0%;
+        }
+      }
+    }
+    @media (max-width: $mobileSmall) {
+      padding-top: rem(240);
+      &:before {
+        height: rem(240);
+      }
+    }
+  }
+
+  // .menu__list
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: rem(20);
+    column-gap: rem(54);
+    z-index: 10;
+    @include adaptiveValue("column-gap", 54, 30, 1, 1920, 992);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      justify-content: start;
+      row-gap: rem(40);
+      flex: 1 1 auto;
+      z-index: 5;
+    }
+  }
+
+  // .menu__item
+
+  &__item {
+    text-align: center;
+  }
+
+  // .menu__link
+
+  &__link {
+    //font-size: rem(20);
+    @include adaptiveValue("font-size", 20, 16, 1, 1920, 992);
+    font-weight: 600;
+    letter-spacing: rem(2);
+    text-transform: uppercase;
+    position: relative;
+
+    @media (max-width: em(1066)) {
+      letter-spacing: normal;
+    }
+    @media (max-width: $tablet) {
+      @include adaptiveValue("font-size", 40, 22, 1, 991, 320);
+      letter-spacing: rem(4);
+
+      z-index: 5;
+      &:before {
+        display: none;
+      }
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: rem(-20);
+      transform: translate(0, -50%);
+      width: rem(12);
+      height: rem(12);
+      border-radius: 50%;
+      background-color: $accentColorPrimary;
+    }
+    &:hover {
+      &:before {
+        animation: bounce 1.5s ease-in-out 0s 1;
+      }
+    }
+  }
+}

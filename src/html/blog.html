@@ -1,0 +1,76 @@
+<section class="main__blog blog" id="blog">
+  <div class="blog__container">
+    <h2 class="blog__title title title_centered brand_hw">Our Blog</h2>
+    <div class="blog__actions">
+      <div class="blog__filtering filtering-blog">
+        <div class="filtering-blog__search search form">
+          <input
+            class="form__input search__input"
+            placeholder="Search"
+            type="text"
+          />
+          <button class="search__image search__image_2" id="erase">
+            <img src="../img/blog/icons/close.svg" alt="" />
+          </button>
+        </div>
+        <div class="search__counter transparent-text">
+          <span>12</span> posts found
+        </div>
+      </div>
+      <div class="blog__sorting sorting-blog">
+        <label
+          for="blog-sorting"
+          class="label sorting-blog__label transparent-text"
+          >Sort By:</label
+        >
+        <select
+          class="select sorting-blog__select"
+          name="blog-sorting"
+          id="blog-sorting"
+        >
+          <option
+            class="select-value sorting-blog__select-value"
+            value="newest"
+          >
+            From Most Recent
+          </option>
+          <option
+            class="select-value sorting-blog__select-value"
+            value="oldest"
+          >
+            From Oldest
+          </option>
+          <option class="select-value sorting-blog__select-value" value="a-z">
+            From A to Z
+          </option>
+          <option class="select-value sorting-blog__select-value" value="z-a">
+            From Z to A
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="blog__body"></div>
+    <div class="blog__pagination pagination-blog">
+      <div class="pagination-blog__body">
+        <a
+          href=""
+          class="pagination-blog__arrow pagination-blog__arrow_prev"
+          id="prev-button"
+          ><img
+            src="../img/common-icons/chevron-small-left-svgrepo-com.svg"
+            alt=""
+        /></a>
+        <div class="pagination-blog__numbers" id="pagination-numbers"></div>
+        <a
+          href=""
+          class="pagination-blog__arrow pagination-blog__arrow_next"
+          id="next-button"
+          ><img
+            src="../img/common-icons/chevron-small-right-svgrepo-com.svg"
+            alt=""
+        /></a>
+      </div>
+    </div>
+  </div>
+</section>

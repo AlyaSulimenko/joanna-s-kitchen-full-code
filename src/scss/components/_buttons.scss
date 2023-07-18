@@ -1,0 +1,48 @@
+.button {
+  display: inline-block;
+  position: relative;
+  background-color: $accentColorPrimary;
+  color: $backgroundColor;
+  border: 3px solid $accentColorPrimary;
+  font-size: rem(20);
+  @include adaptiveValue("font-size", 20, 18, 1, 1920, 992);
+  font-weight: 600;
+  padding: rem(10) rem(25);
+  border-radius: rem(10);
+  transition: all 0.2s;
+  &:hover {
+    background-color: rgb(254, 235, 221);
+    color: $accentColorPrimary;
+  }
+
+  &_sec {
+    background-color: $accentColorSecondary;
+    border: 3px solid $accentColorSecondary;
+
+    &:hover {
+      color: $accentColorSecondary;
+      background-color: #fff;
+    }
+  }
+  &_single {
+    &:hover {
+      transform: translateY(rem(-3));
+      box-shadow: 0 1rem 1rem rgba($accentColorPrimary, 0.2);
+    }
+    &:active {
+      outline: none;
+      transform: translateY(rem(5));
+      box-shadow: 0 0.5rem 1rem rgba ($accentColorPrimary, 0.2);
+    }
+  }
+  &_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:active {
+      outline: none;
+      transform: translateY(rem(2));
+      box-shadow: 0 0.5rem 1rem rgba ($accentColorPrimary, 0.2);
+    }
+  }
+}

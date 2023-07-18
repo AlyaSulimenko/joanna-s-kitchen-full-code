@@ -1,0 +1,261 @@
+<div class="popup join-popup" id="join-popup">
+  <div class="popup__wrapper join-popup__wrapper">
+    <div class="popup__content join-popup__content">
+      <button
+        data-close
+        type="button"
+        class="popup__close join-popup__close arrow"
+      >
+        <span class="arrow_span"></span>
+        <span class="arrow_span"></span>
+        <span class="arrow_span"></span>
+      </button>
+      <div class="popup__body join-popup__body">
+        <h2
+          class="popup__title join-popup__title title brand_typ title_centered"
+        >
+          Welcome to Joanna's Kitchen!
+        </h2>
+        <div
+          class="popup__text join-popup__text section-descr section-descr_centered"
+        >
+          It is a perfect time to join our community! Please answer the further
+          questions for us to know you better.
+        </div>
+        <form class="join-popup__form form-submit" action="">
+          <div class="join-popup__group join-popup__group_1">
+            <div class="join-popup__form-item">
+              <label
+                class="label join-popup__label transparent-text"
+                for="fname"
+                >Your name:</label
+              ><br />
+              <input
+                class="input form__input join-popup__input"
+                type="text"
+                id="fname"
+                name="fname"
+                required
+                minlength="2"
+                maxlength="50"
+                pattern="[A-Za-z\s]+"
+                title="Please enter a valid name (only alphabets and spaces allowed)"
+                autocomplete="off"
+              /><br />
+            </div>
+            <div class="join-popup__form-item">
+              <label
+                for="phone"
+                class="label join-popup__label transparent-text"
+                >Enter your phone number:</label
+              ><br />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="input form__input join-popup__input"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="join-popup__form-item">
+              <label
+                for="email-popup"
+                class="label join-popup__label transparent-text"
+                >Enter your email:</label
+              ><br />
+              <input
+                type="email"
+                id="email-popup"
+                name="email"
+                autocomplete="off"
+                class="input form__input join-popup__input"
+                required
+              />
+            </div>
+          </div>
+          <div class="join-popup__group join-popup__group_2">
+            <div class="join-popup__form-item join-popup__select-item">
+              <label
+                for="join-popup-age"
+                class="label join-popup__label transparent-text"
+                >Your age:</label
+              ><br />
+              <select
+                class="select join-popup__select"
+                name="join-popup-age"
+                id="join-popup-age"
+              >
+                <option
+                  class="select-value join-popup__select-value"
+                  value="empty"
+                ></option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="under-18"
+                >
+                  Under 18 years
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="18-25"
+                >
+                  From 18 to 25
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="25-35"
+                >
+                  From 25 to 35
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="35-45"
+                >
+                  From 35 to 45
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="45-55"
+                >
+                  From 45 to 55
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="55-65"
+                >
+                  From 55 to 65
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="over-65"
+                >
+                  Older than 65 years
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="none"
+                >
+                  I'd rather not say
+                </option>
+              </select>
+            </div>
+            <div class="join-popup__form-item join-popup__select-item">
+              <label
+                for="join-popup-english"
+                class="label join-popup__label transparent-text"
+                >How fluent is your English?</label
+              ><br />
+              <select
+                class="select join-popup__select"
+                name="join-popup-english"
+                id="join-popup-english"
+              >
+                <option
+                  class="select-value join-popup__select-value"
+                  value="empty"
+                ></option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="native"
+                >
+                  I'm a native speaker
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="fluent"
+                >
+                  Have no troubles with understanding
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="not-fluent"
+                >
+                  Might need some help
+                </option>
+              </select>
+            </div>
+            <div class="join-popup__form-item join-popup__select-item">
+              <label
+                for="join-popup-company"
+                class="label join-popup__label transparent-text"
+                >You're more likely to come:</label
+              ><br />
+              <select
+                class="select join-popup__select"
+                name="join-popup-company"
+                id="join-popup-company"
+              >
+                <option
+                  class="select-value join-popup__select-value"
+                  value="empty"
+                ></option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="alone"
+                >
+                  Alone
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="two"
+                >
+                  With a date
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="friends"
+                >
+                  With few friends
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="fam"
+                >
+                  With kids
+                </option>
+                <option
+                  class="select-value join-popup__select-value"
+                  value="else"
+                >
+                  Else
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="join-popup__info transparent-text">
+            We will use the information you provide on this form to be in touch
+            with you & let you know about our upcoming events and special
+            offers.
+          </div>
+
+          <div class="join-popup__group join-popup__group_3">
+            <div class="join-popup__checkbox-pair">
+              <input
+                type="checkbox"
+                id="agree"
+                name="agree"
+                value="agree"
+                required
+              />
+              <label for="agree">I agree</label><br />
+            </div>
+            <button type="submit" class="button button_sec button_single">
+              Join Us!
+            </button>
+          </div>
+        </form>
+        <div class="join-popup__footer">
+          <div class="join-popup__logo logo-join-popup">
+            <a href="#" class="join-popup__image"
+              ><img src="../img/logos/logo_secondary.png" alt="logo"
+            /></a>
+          </div>
+          <div class="join-popup__copyright transparent-text">
+            Joanna's Kitchen LTD © 2022. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

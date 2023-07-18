@@ -1,0 +1,44 @@
+.title {
+  @include adaptiveValue("font-size", 50, 20);
+  line-height: math.div(60, 50);
+  &_secondary {
+    @include adaptiveValue("font-size", 40, 20);
+  }
+  &_centered {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.section-descr {
+  @include adaptiveValue("font-size", 30, 18);
+  line-height: math.div(40, 30);
+  &_centered {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.brand_hw {
+  font-weight: 700;
+  font-family: $handwritingFont;
+  color: $accentColorSecondary;
+  @include adaptiveValue("font-size", 70, 40);
+}
+.brand_typ {
+  text-transform: uppercase;
+  @include adaptiveValue("font-size", 30, 20);
+  letter-spacing: rem(15);
+  font-weight: 500;
+  @include adaptiveValue("letter-spacing", 15, 12);
+}
+.subtitle {
+  font-weight: 500;
+  letter-spacing: rem(2);
+  text-transform: uppercase;
+  @include adaptiveValue("font-size", 22, 18);
+  line-height: math.div(26, 22);
+}
+.transparent-text {
+  font-size: rem(16);
+  font-weight: 600;
+  opacity: 0.5;
+}

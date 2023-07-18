@@ -1,0 +1,128 @@
+.about {
+  @include adaptiveValue("padding-top", 80, 20);
+  @include adaptiveValue("padding-bottom", 80, 20);
+  background-color: rgb(251, 239, 230);
+
+  // .about__container
+
+  &__container {
+    display: flex;
+    column-gap: rem(40);
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // .about__content
+
+  &__content {
+    flex: 1 1 50%;
+    padding-bottom: rem(20);
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $tablet) {
+      align-items: center;
+      padding-left: rem(15);
+      padding-right: rem(15);
+      z-index: 5;
+    }
+  }
+
+  // .about__title
+
+  &__title {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 20);
+    }
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+
+  // .about__descr
+
+  &__descr {
+    @include adaptiveValue("font-size", 24, 20);
+    line-height: math.div(30, 24);
+    &:not(:last-child) {
+      @include adaptiveValue("padding-bottom", 40, 10);
+    }
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+
+  // .about__items
+
+  &__items {
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(50);
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  // .about__item
+
+  &__item {
+  }
+  // .about__block
+  &__block {
+  }
+}
+//================================================================================================================================
+.item-about {
+  display: flex;
+  align-items: center;
+  gap: rem(30);
+  &:not(:last-child) {
+    margin-bottom: rem(20);
+  }
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    max-width: 300px;
+  }
+  //.item-about__content
+
+  &__content {
+    flex: 1 1 rem(350);
+    @media (max-width: $tablet) {
+      flex: 1 1 auto;
+    }
+  }
+  // .item-about__icon
+
+  &__icon {
+    width: rem(90);
+    height: rem(90);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+  }
+
+  // .item-about__subtitle
+
+  &__subtitle {
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+
+  // .item-about__descr
+
+  &__descr {
+    font-weight: 400;
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: math.div(22, 18);
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+}

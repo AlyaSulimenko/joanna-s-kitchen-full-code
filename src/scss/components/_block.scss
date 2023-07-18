@@ -1,0 +1,153 @@
+.block__container {
+	display: flex;
+	column-gap: rem(40);
+ }
+ .block {
+	overflow: hidden;
+	position: relative;
+	width: 50%;
+	background-color: rgba(255, 149, 81, 0.4);
+	border-radius: rem(20);
+	display: flex;
+	flex-direction: column;
+	@media (max-width: $tablet) {
+	  width: 100%;
+	  background-color: rgba(255, 149, 81, 0.2);
+	  justify-content: flex-start;
+	  @include adaptiveValue("padding-top", 50, 15);
+	  @include adaptiveValue("padding-bottom", 50, 15);
+	}
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+	@media (any-hover: hover) {
+	  &:hover {
+		 box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+	  }
+	}
+	&__image {
+	  width: 90%;
+	  margin: 0 auto;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  position: relative;
+	  flex: 0 0 70%;
+	  padding-bottom: 66.65%;
+	  overflow: hidden;
+	  @media (max-width: em(1099.98)) {
+		 flex: 0 1 80%;
+	  }
+	  @media (max-width: $tablet) {
+		 top: 0;
+		 transform: translateY(0);
+		 width: 90%;
+		 &:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 10);
+		 }
+	  }
+	  img {
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 width: 100%;
+		 height: 100%;
+		 border-radius: rem(20);
+		 object-fit: cover;
+		 object-position: center;
+	  }
+	}
+	&__circle {
+	  pointer-events: none;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  @include adaptiveValue("width", 420, 500);
+	  @include adaptiveValue("height", 420, 500);
+	  &::before {
+		 content: "";
+		 display: block;
+		 border-radius: 50%;
+		 width: 100%;
+		 height: 100%;
+	  }
+	  @media (max-width: $mobileSmall) {
+		 display: none;
+	  }
+ 
+	  //.about__circle_2
+	  &_1 {
+		 @include adaptiveValue("width", 520, 500);
+		 @include adaptiveValue("height", 520, 500);
+		 &::before {
+			transform: translate(calc(100% + rem(0)), calc(-25% + rem(0)));
+			border: 1.5px solid #fff;
+			@media (max-width: $tablet) {
+			  transform: translate(calc(65% + rem(0)), calc(-25% + rem(0)));
+			  opacity: 0.8;
+			}
+		 }
+	  }
+	  //.about__circle_2
+	  &_2 {
+		 @include adaptiveValue("width", 520, 500);
+		 @include adaptiveValue("height", 520, 500);
+		 &::before {
+			transform: translate(calc(100% + rem(55)), calc(-25% - rem(55)));
+			border: 1.5px solid $accentColorSecondary;
+			@media (max-width: $tablet) {
+			  transform: translate(calc(65% + rem(55)), calc(-25% + rem(55)));
+			  opacity: 0.8;
+			}
+		 }
+	  }
+	  //.about__circle_3
+	  &_3 {
+		 &::before {
+			transform: translate(calc(20% + rem(0)), calc(150% + rem(0)));
+			border: 1.5px solid #fff;
+			@media (max-width: $tablet) {
+			  transform: translate(calc(-20% + rem(0)), calc(150% + rem(0)));
+			  opacity: 0.8;
+			}
+		 }
+	  }
+	  //.about__circle_4
+	  &_4 {
+		 &::before {
+			transform: translate(calc(20% + rem(55)), calc(150% - rem(55)));
+			border: 1.5px solid $accentColorSecondary;
+			@media (max-width: $tablet) {
+			  transform: translate(calc(-20% + rem(55)), calc(150% - rem(55)));
+			  opacity: 0.8;
+			}
+		 }
+	  }
+	  //.about__circle_5
+	  &_5 {
+		 &::before {
+			transform: translate(calc(75% + rem(0)), calc(320% + rem(0)));
+			border: 1.5px solid #fff;
+			display: none;
+			@media (max-width: $tablet) {
+			  display: block;
+			  transform: translate(calc(50% + rem(0)), calc(320% + rem(0)));
+			  opacity: 0.8;
+			}
+		 }
+	  }
+	  //.about__circle_6
+	  &_6 {
+		 &::before {
+			transform: translate(calc(75% + rem(55)), calc(320% - rem(55)));
+			border: 1.5px solid $accentColorSecondary;
+			display: none;
+			@media (max-width: $tablet) {
+			  display: block;
+			  transform: translate(calc(50% + rem(55)), calc(320% - rem(55)));
+			  opacity: 0.8;
+			}
+		 }
+	  }
+	}
+	&__tablet {
+	  z-index: 5;
+	}
+ }
