@@ -1773,6 +1773,14 @@ select {
           justify-content: center;
 }
 
+.footer__source a {
+  text-transform: uppercase;
+}
+
+.footer__source a:hover {
+  color: rgb(13, 201, 201);
+}
+
 .phones-footer:not(:last-child) {
   margin-bottom: 3.75rem;
 }

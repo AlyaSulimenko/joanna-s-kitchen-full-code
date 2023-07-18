@@ -106,9 +106,15 @@
     justify-content: center;
   }
 
-  // .footer__copyright
+  // .footer__source
 
-  &__copyright {
+  &__source {
+    a {
+      text-transform: uppercase;
+      &:hover {
+        color: $accentColorSecondary;
+      }
+    }
   }
 }
 .phones-footer {
